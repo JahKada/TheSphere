@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Animated Text</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="Sphere"></span>
+
+    <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2.0/dist/TagCloud.min.js"></script>
+
+    <script>
+        const Text = [
+            'HTML', 'CSS', 'JS', 'GIT', 
+            'JSX', 'MONGOOSE', 
+            'REACT', 'PYTHON', 'SWIFT', 
+            'JIRA', 'NODE.JSON',
+             'MONGODB', 'JAVA', 'DJANGO', 
+             'EXPRESS', 'MYSQL'
+        ];
+
+        var TagCloud = TagCloud(' .Sphere', Text, {
+
+            //Sphere radius in pixels
+            radius: 230,
+
+            //animation speed
+            //normal, slow, fast
+            maxSpeed: 'normal',
+            initSpeed: 'fast',
+
+            //rolling direction [0 (top), 90 (left), 135 (right-bottom)]
+            direction: 135,
+
+            //interaction with mouse or not [ DEfualt true ( decelerate to rolling init speed, & keep rolling with mouse)]
+            keep: true
+        });
+
+        //Given color to each text in the Sphere
+        var color = 'purple';
+        document.querySelector('.Sphere').style.color = color;
+
+    </script>
+</body>
+</html>
